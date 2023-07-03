@@ -8,6 +8,7 @@ function NewExpense(props){
             ...expenseEnteredData,
             id: Math.random().toString(),
         }
+        // console.log(expenseData);
         props.onSaveExpenseData(expenseData);
     }
     return(

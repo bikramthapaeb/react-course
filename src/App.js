@@ -21,17 +21,28 @@ const dummyExpense = [
     amount: 450,
     date: new Date(2021, 5, 12),
   },
+  {
+    id: 'e5',
+    title: 'New Desk (Wooden)',
+    amount: 450,
+    date: new Date(2022, 5, 12),
+  },
+  {
+    id: 'e6',
+    title: 'New Desk (Wooden)',
+    amount: 450,
+    date: new Date(2023, 5, 12),
+  },
 ];
 function App() {
 const [expenses, addNewExpense] = useState(dummyExpense);
-
+// alternate  method  to render jsx
   // return React.createElement(
   //   'div', 
   //   {}, 
   //   React.createElement('h2', {}, "let's get started"), 
   //   React.cloneElement(Expenses, { items: expenses })
   // );
-  // console.log(expenses);
   const onSaveExpenseDataHandler = expense =>{
     addNewExpense(prevExpense => {
       return [ expense, ...prevExpense];
